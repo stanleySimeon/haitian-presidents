@@ -7,22 +7,10 @@ const Home: FC = () => {
         <Flex
             maxW="xl"
             minH={'100vh'}
-            pt={90}
+            pt={80}
             flexDirection={'column'}
-            justifyContent="center"
         >
-            <Container textAlign={'center'}>
-                <Presidents />
-                <Presidents />
-                <Presidents />
-                <Presidents />
-                <Presidents />
-                <Presidents />
-                <Presidents />
-                <Presidents />
-                <Presidents />
-                <Presidents />
-                <Presidents />
+            <Container textAlign={'center'} mb={50}>
                 <Presidents />
             </Container>
         </Flex>
