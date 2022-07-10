@@ -7,10 +7,10 @@ const Home: FC = () => {
         <Flex
             maxW="xl"
             minH={'100vh'}
-            pt={80}
+            padding={'.1rem'}
             flexDirection={'column'}
         >
-            <Container textAlign={'center'} mb={50}>
+            <Container textAlign={'center'} mt={80} mb={50}>
                 <Presidents />
             </Container>
         </Flex>

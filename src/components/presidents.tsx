@@ -1,5 +1,6 @@
+/* eslint-disable no-lone-blocks */
 import React, { FC } from 'react';
-import { Flex, Link, Box, Img, Text, Icon } from '@chakra-ui/react';
+import { Flex, Box, Link, Img, Text, Icon } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
 const Presidents: FC = () => {
@@ -76,7 +77,7 @@ const Presidents: FC = () => {
         },
         {
             id: 11,
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pierrot_%28President_d%27Haiti_1845-1846%29_%28cropped%29.jpg/80px-Pierrot_%28President_d%27Haiti_1845-1846%29_%28cropped%29.jpg ',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pierrot_%28President_d%27Haiti_1845-1846%29_%28cropped%29.jpg/80px-Pierrot_%28President_d%27Haiti_1845-1846%29_%28cropped%29.jpg',
             name: 'Jean-Louis Pierrot',
             info: 'Fifth President of Haiti',
             date: '1845-1846',
@@ -251,7 +252,7 @@ const Presidents: FC = () => {
         },
         {
             id: 36,
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Joseph_Davilmar_Theodore_portrait.jpg/80px-Joseph_Davilmar_Theodore_portrait.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Joseph_Davilmar_Theodore_portrait.jpg/80px-Joseph_Davilmar_Theodore_portrait.jpg ',
             name: 'Joseph D. Theodore',
             info: 'President of Haiti',
             date: '1914-1915',
@@ -328,7 +329,7 @@ const Presidents: FC = () => {
         },
         {
             id: 47,
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Joseph_Nemours_Pierre-Louis_portrait.jpg/80px-Joseph_Nemours_Pierre-Louis_portrait.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Joseph_Nemours_Pierre-Louis_portrait.jpg/80px-Joseph_Nemours_Pierre-Louis_portrait.jpg ',
             name: 'Joseph N. Pierre-Louis',
             info: 'Provisional President of Haiti',
             date: '1956-1957',
@@ -414,7 +415,7 @@ const Presidents: FC = () => {
             id: 59,
             image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Ertha_Pascal-Trouillot_on_January_7%2C_1991.png/80px-Ertha_Pascal-Trouillot_on_January_7%2C_1991.png',
             name: 'Ertha Pascal-Trouillot',
-            info: 'Provisional President of Haiti', 
+            info: 'Provisional President of Haiti',
             date: '1990-1991',
         },
         {
@@ -447,7 +448,7 @@ const Presidents: FC = () => {
         },
         {
             id: 64,
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Jean-Bertrand_Aristide_%28cropped%29.jpg/80px-Jean-Bertrand_Aristide_%28cropped%29.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Jean-Bertrand_Aristide_%28cropped%29.jpg/80px-Jean-Bertrand_Aristide_%28cropped%29.jpg ',
             name: 'Jean-Bertrand Aristide',
             info: 'President of Haiti',
             date: '1993-1994',
@@ -543,7 +544,7 @@ const Presidents: FC = () => {
                 <Flex
                     key={president.id}
                     minH={'3em'}
-                    m={'.5em'}
+                    m={'.2em'}
                     bg={'#062141'}
                     boxShadow={'0px .2px 5px .2px #5C5C5C'}
                     justifyContent="space-between"
@@ -581,7 +582,7 @@ const Presidents: FC = () => {
                                 bg={'#062141'}
                                 borderRadius={'50%'}
                             >
-                                <Img w={'92%'} h={'92%'} objectFit={'cover'} borderRadius={'100%'} src={president.image} />
+                                <Img w={'92%'} h={'92%'} objectFit={'cover'} borderRadius={'100%'} src={president.image} alt={president.name} />
                             </Box>
                         </Box>
                     </Box>
@@ -590,7 +591,7 @@ const Presidents: FC = () => {
                         <Text fontSize={'.6rem'} fontWeight={'lighter'} fontStyle={'italic'} color={'#C58E00'}>{president.info}</Text>
                         <Text fontSize={'.6rem'} fontWeight={'lighter'} color={'#FFFFFF'}>{president.date}</Text>
                     </Box>
-                    <Link href="/Bio" color={'#D9D9D9'} >
+                    <Link href={`/bio/${president.id}`} color={'#D9D9D9'} >
                         <Icon fontSize={30} as={ChevronRightIcon} />
                     </Link>
                 </Flex >
