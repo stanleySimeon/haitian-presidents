@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Img, Flex, Link, Text } from '@chakra-ui/react';
+import { Img, Flex, Box, Link, Text } from '@chakra-ui/react';
 import flag from '././../../assets/haitianCard.png';
 
 const Nav: React.FC = () => {
@@ -22,6 +22,7 @@ const Nav: React.FC = () => {
             <Link href="/" color={'white'} textDecor={'none'} fontSize={'1.2rem'}>
                 <Img src={flag} alt="Haitian Flag" w={30} />
             </Link>
+            <Box w={'2px'} h={'20px'} bg={'#f5f5f5'}></Box>
             <Text>
                 Haitian Presidents
             </Text>
