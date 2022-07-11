@@ -2,6 +2,17 @@
 import React, { FC } from 'react';
 import { Flex, Box, Link, Img, Text, Icon } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+import { extendTheme } from "@chakra-ui/react";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
+
+const breakpoints = createBreakpoints({
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+})
+// 3. Extend the theme
+export const theme = extendTheme({ breakpoints });
 
 const Presidents: FC = () => {
     const president = [
@@ -543,9 +554,8 @@ const Presidents: FC = () => {
             {president.map((president) => (
                 <Flex
                     key={president.id}
-                    minH={'3em'}
-                    m={'.2em'}
                     bg={'#062141'}
+                    m={'.2em'}
                     boxShadow={'0px .2px 5px .2px #5C5C5C'}
                     justifyContent="space-between"
                     alignItems="center"
@@ -558,31 +568,28 @@ const Presidents: FC = () => {
                         display="flex"
                         justifyContent={'center'}
                         alignItems="center"
-                        width='84px'
-                        h='84px'
+                        boxSize={'84px'}
                         bg={'#FFFFFF'}
-                        borderRadius={'50%'}
+                        borderRadius="full"
                     >
 
                         <Box
                             display="flex"
                             justifyContent={'center'}
                             alignItems="center"
-                            width='76px'
-                            h='76px'
+                            boxSize={'76px'}
                             bg={'#C58E00'}
-                            borderRadius={'50%'}
+                            borderRadius="full"
                         >
                             <Box
                                 display="flex"
                                 justifyContent={'center'}
                                 alignItems="center"
-                                width='70px'
-                                h='70px'
+                                boxSize={'70px'}
                                 bg={'#062141'}
-                                borderRadius={'50%'}
+                                borderRadius="full"
                             >
-                                <Img w={'92%'} h={'92%'} objectFit={'cover'} borderRadius={'100%'} src={president.image} alt={president.name} />
+                                <Img w={'92%'} h={'92%'} objectFit={'cover'} borderRadius="full" src={president.image} alt={president.name} />
                             </Box>
                         </Box>
                     </Box>
