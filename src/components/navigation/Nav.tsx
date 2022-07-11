@@ -12,7 +12,7 @@ const Nav: React.FC = () => {
             minWidth='max-content'
             alignItems='center'
             justify="center"
-            gap={'1rem'}
+            gap={'1em'}
             wrap="wrap"
             padding="1rem"
             bgColor={'#073063'}
