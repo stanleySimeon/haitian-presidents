@@ -598,7 +598,7 @@ const Presidents: FC = () => {
                         <Text fontSize={'.6rem'} fontWeight={'lighter'} fontStyle={'italic'} color={'#C58E00'}>{president.info}</Text>
                         <Text fontSize={'.6rem'} fontWeight={'lighter'} color={'#FFFFFF'}>{president.date}</Text>
                     </Box>
-                    <Link href={`/bio/${president.id}`} color={'#D9D9D9'} >
+                    <Link href="#" color={'#D9D9D9'} >
                         <Icon fontSize={30} as={ChevronRightIcon} />
                     </Link>
                 </Flex >
